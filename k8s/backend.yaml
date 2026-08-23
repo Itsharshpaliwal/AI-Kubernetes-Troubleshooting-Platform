@@ -17,7 +17,7 @@ spec:
 
       containers:
         - name: ai-devops-backend
-          image: itsharshpaliwal/ai-devops-backend:3.1
+          image: itsharshpaliwal/ai-devops-backend:3.3
           imagePullPolicy: IfNotPresent
 
           ports:
