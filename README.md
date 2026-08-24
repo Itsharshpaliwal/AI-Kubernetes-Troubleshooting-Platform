@@ -70,3 +70,40 @@ The system provides a centralized web interface where Kubernetes information can
       │ Monitoring      │
       │ Dashboard       │
       └─────────────────┘
+
+🏗️ Architecture
+
+The application is deployed as multiple Kubernetes workloads.
+
+Application Namespace
+ai-devops
+│
+├── Frontend
+│   ├── Deployment
+│   └── NodePort Service
+│
+├── Backend
+│   ├── Deployment
+│   └── NodePort Service
+│
+└── PostgreSQL
+    ├── Deployment
+    ├── ClusterIP Service
+    └── PersistentVolumeClaim
+
+Monitoring Namespace
+monitoring
+│
+├── Prometheus
+├── Grafana
+├── Alertmanager
+├── kube-state-metrics
+├── Node Exporter
+└── Prometheus Operator
+
+🖼️ Project Screenshots
+
+Login -![Login](screenshots/login.png.png)
+
+
+
